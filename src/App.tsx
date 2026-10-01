@@ -9,13 +9,21 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
 import { StickyBottomBar } from './components/StickyBottomBar';
 import { RecentSignupToast } from './components/RecentSignupToast';
+import { COURSE_DETAILS } from './data/courseData';
 import { Language } from './types';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('ta');
 
   const handleOpenCheckout = () => {
-    // Inactive button only - no page activation as requested
+    // Direct link to SuperProfile checkout page
+    const link = document.createElement('a');
+    link.href = COURSE_DETAILS.checkoutUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

@@ -15,6 +15,7 @@ export const COURSE_DETAILS = {
   rating: "4.9",
   studentsCount: "1,500+",
   adSpendHandled: "₹1.5+ Cr",
+  checkoutUrl: "https://superprofile.bio/e/-H7Tj-v1",
 };
 
 export const CURRICULUM_DAYS: CurriculumDay[] = [
